@@ -1,7 +1,7 @@
 {
     "name": "omz13/omz13-coding-standard",
     "type": "phpcodesniffer-standard",
-    "version": "0.0.0",
+    "version": "0.1.0",
     "description": "A Coding Standard (a set of PHPCS rules) for projects by omz13.",
     "keywords": [
         "coding",
