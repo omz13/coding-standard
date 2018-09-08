@@ -4,8 +4,9 @@
     How omz13 likes code to look.
   </description>
 
-  <!-- look here -->
-  <file>src</file>
+  <rule ref="PHPCompatibility">
+    <config name="testVersion" value="7.1-"/>
+  </rule>
 
   <!-- tabs -->
   <arg name="tab-width" value="2"/>
