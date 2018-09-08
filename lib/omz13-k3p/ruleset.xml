@@ -4,10 +4,11 @@
     How omz13 likes code to look.
   </description>
 
+  <!-- look here -->
+  <file>src</file>
+
   <!-- tabs -->
   <arg name="tab-width" value="2"/>
-
-  <!-- see https://github.com/squizlabs/PHP_CodeSniffer/wiki/Customisable-Sniff-Properties#squizwhitespacefunctionspacing -->
 
   <!-- all generic -->
   <rule ref="Generic">
@@ -47,7 +48,7 @@
   <!-- my code is complex... deal with it -->
   <rule ref="Generic.Metrics.CyclomaticComplexity">
     <properties>
-      <property name="complexity" value="18"/>
+      <property name="complexity" value="20"/>
       <property name="absoluteComplexity" value="30"/>
     </properties>
   </rule>
@@ -220,13 +221,20 @@
     </properties>
   </rule>
 
-  <rule ref="Squiz.WhiteSpace.SuperfluousWhitespace"/>
-  <rule ref="Squiz.WhiteSpace.SuperfluousWhitespace.StartFile"/>
-  <rule ref="Squiz.WhiteSpace.SuperfluousWhitespace.EndFile"/>
-  <rule ref="Squiz.WhiteSpace.SuperfluousWhitespace.EmptyLines">
+  <!-- Explicitly re-enable these sniffs because they are disabled by PSR2. See https://github.com/squizlabs/PHP_CodeSniffer/issues/600#issuecomment-104889303-->
+  <rule ref="Squiz.WhiteSpace.SuperfluousWhitespace">
     <properties>
-      <severity>5</severity>
+      <property name="ignoreBlankLines" value="false"/>
     </properties>
+  </rule>
+  <rule ref="Squiz.WhiteSpace.SuperfluousWhitespace.StartFile">
+    <severity>5</severity>
+  </rule>
+  <rule ref="Squiz.WhiteSpace.SuperfluousWhitespace.EndFile">
+    <severity>5</severity>
+  </rule>
+  <rule ref="Squiz.WhiteSpace.SuperfluousWhitespace.EmptyLines">
+    <severity>5</severity>
   </rule>
 
   <!-- Method and function arguments with default values MUST go at the end of the argument list. -->
@@ -235,13 +243,8 @@
   <!-- Some slevomat -->
 
   <rule ref="SlevomatCodingStandard.Exceptions.ReferenceThrowableOnly"/>
-  <!-- <rule ref="SlevomatCodingStandard.TypeHints.DeclareStrictTypes">
-    <properties>
-      <property name="newlinesCountBetweenOpenTagAndDeclare" value="2"/>
-      <property name="spacesCountAroundEqualsSign" value="0"/>
-      <property name="newlinesCountAfterDeclare" value="2"/>
-    </properties>
-  </rule> -->
+  <!-- <rule ref="SlevomatCodingStandard.TypeHints.DeclareStrictTypes"> <properties> <property name="newlinesCountBetweenOpenTagAndDeclare" value="2"/> <property name="spacesCountAroundEqualsSign" value="0"/> <property name="newlinesCountAfterDeclare"
+  value="2"/> </properties> </rule> -->
   <rule ref="SlevomatCodingStandard.ControlStructures.AssignmentInCondition"/>
   <!-- <rule ref="SlevomatCodingStandard.ControlStructures.DisallowEmpty"/> -->
   <!-- <rule ref="SlevomatCodingStandard.ControlStructures.DisallowEqualOperators"/> -->
