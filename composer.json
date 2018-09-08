@@ -1,7 +1,7 @@
 {
     "name": "omz13/omz13-coding-standard",
     "type": "phpcodesniffer-standard",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "description": "A Coding Standard (a set of PHPCS rules) for projects by omz13.",
     "keywords": [
         "coding",
@@ -32,11 +32,8 @@
       "dealerdirect/phpcodesniffer-composer-installer": "^0.4.4 || This Composer plugin will sort out the PHPCS 'installed_paths' automatically.",
       "roave/security-advisories": "dev-master || Helps prevent installing dependencies with known security issues."
     },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "1.0.x-dev"
-        }
-    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "scripts" : {
         "post-install-cmd": "./vendor/bin/phpcs --config-set installed_paths ../../..",
         "post-update-cmd" : "./vendor/bin/phpcs --config-set installed_paths ../../.."
