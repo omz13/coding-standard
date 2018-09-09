@@ -138,6 +138,20 @@
   <!-- Squiz.Commenting.InlineComment.NotCapital -->
   <!-- Squiz.Commenting.InlineComment.InvalidEndChar -->
 
+  <!-- Nasty. Need to exclude that which is what we want -->
+  <rule ref="Squiz.Arrays.ArrayDeclaration">
+    <exclude name="Squiz.Arrays.ArrayDeclaration.ValueNotAligned"/>
+    <exclude name="Squiz.Arrays.ArrayDeclaration.KeyNotAligned"/>
+    <!-- <exclude name="Squiz.Arrays.ArrayDeclaration.DoubleArrowNotAligned" /> -->
+    <exclude name="Squiz.Arrays.ArrayDeclaration.ValueNotAligned"/>
+    <exclude name="Squiz.Arrays.ArrayDeclaration.CloseBraceNotAligned"/>
+    <exclude name="Squiz.Arrays.ArrayDeclaration.ValueNoNewline"/>
+    <exclude name="Squiz.Arrays.ArrayDeclaration.MultiLineNotAllowed"/>
+    <exclude name="Squiz.Arrays.ArrayDeclaration.SingleLineNotAllowed"/>
+    <exclude name="Squiz.Arrays.ArrayDeclaration.NoComma"/>
+    <exclude name="Squiz.Arrays.ArrayDeclaration.NoCommaAfterLast"/>
+  </rule>
+
   <rule ref="Squiz.Commenting.ClosingDeclarationComment"/>
 
   <rule ref="Squiz.Commenting.LongConditionClosingComment">
