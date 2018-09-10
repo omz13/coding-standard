@@ -13,5 +13,5 @@ build: tools
 	@echo Ta Da
 
 release: tools
-	composer update
+	$(if $(shell composer global show | grep localheinz/composer-normalize; if [ $$? -eq 1 ] ; then exit 1 ; fi), , $(error Need to do: composer global install localheinz/composer-normalize))
 	./RMT release
