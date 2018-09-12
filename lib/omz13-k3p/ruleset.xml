@@ -20,6 +20,7 @@
     <exclude name="Generic.Files.EndFileNoNewline.Found"/>
     <exclude name="Generic.Files.LineLength"/>
     <exclude name="Generic.Formatting.NoSpaceAfterCast"/>
+    <exclude name="Generic.Functions.FunctionCallArgumentSpacing.SpaceBeforeComma"/>
     <exclude name="Generic.Functions.OpeningFunctionBraceBsdAllman.BraceOnSameLine"/>
     <exclude name="Generic.PHP.ClosingPHPTag.NotFound"/>
     <exclude name="Generic.PHP.UpperCaseConstant.Found"/>
